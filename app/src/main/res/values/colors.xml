@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color_200">#DFC542</color>
+    <color name="primary_color_500">#E6C41D</color>
+    <color name="primary_color_700">#EEC600</color>
+    <color name="secondary_color_200">#76B2E6</color>
+    <color name="secondary_color_500">#489BE3</color>
+    <color name="secondary_color_700">#238BE4</color>
+    <color name="background_color_200">#EFEBC2</color>
+    <color name="black">#FF000000</color>
+    <color name="gray_200">#8C8C8C</color>
+    <color name="gray_500">#505050</color>
+    <color name="gray_700">#292929</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

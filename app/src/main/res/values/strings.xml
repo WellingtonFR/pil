@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LoginTest</string>
+    <string name="entrar">ENTRAR</string>
+    <string name="programa_de_incentivo_a_leitura">Programa de incentivo a leitura</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="criar_conta">Criar conta</string>
+    <string name="esqueceu_a_senha">Esqueceu a senha</string>
+</resources>
