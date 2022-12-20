@@ -8,17 +8,17 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
         val inputEmail = findViewById<EditText>(R.id.editTextEmailAddress)
         val inputPassword = findViewById<EditText>(R.id.editTextPassword)
         val submitLoginButton = findViewById<Button>(R.id.buttonLogin)
 
         fun showError(inputName: TextView, message: String) {
-            inputName.setError(message)
+            inputName.error = message
             inputName.requestFocus()
         }
 
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             val inputPasswordValue = inputPassword.text.toString()
 
             if (inputEmailValue == "gbwellington@hotmail.com" && inputPasswordValue == "1234") {
-                val intent = Intent(this, HomePage::class.java)
+                val intent = Intent(this, Home::class.java)
                 intent.putExtra("USERNAME", "Wellington")
                 startActivity(intent)
             } else if (inputEmailValue == "") {

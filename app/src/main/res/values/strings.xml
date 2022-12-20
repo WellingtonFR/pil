@@ -7,4 +7,12 @@
     <string name="criar_conta">Criar conta</string>
     <string name="esqueceu_a_senha">Esqueceu a senha</string>
     <string name="sair">SAIR</string>
+    <string name="melhor_avaliados">Melhor avaliados</string>
+    <string name="hero_image_description">Descrição do herói</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="conta">Conta</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
