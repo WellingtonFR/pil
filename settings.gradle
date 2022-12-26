@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "LoginTest"
+rootProject.name = "pil"
 include ':app'

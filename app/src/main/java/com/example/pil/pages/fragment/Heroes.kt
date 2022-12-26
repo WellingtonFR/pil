@@ -1,4 +1,4 @@
-package com.example.logintest
+package com.example.pil.pages.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pil.HeroRecycleViewAdapter
+import com.example.pil.R
+import com.example.pil.data.Hero
 
 class Heroes : Fragment() {
 
@@ -26,7 +29,7 @@ class Heroes : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.activity_hero, container, false)
+        return inflater.inflate(R.layout.fragment_hero, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -1,13 +1,15 @@
-package com.example.logintest
+package com.example.pil
 
+import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pil.data.Hero
 
-class HeroRecycleViewAdapter(val heroList:List<Hero>) : RecyclerView.Adapter<HeroViewHolder>() {
+class HeroRecycleViewAdapter(val heroList: List<Hero>) : RecyclerView.Adapter<HeroViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -28,7 +30,7 @@ class HeroRecycleViewAdapter(val heroList:List<Hero>) : RecyclerView.Adapter<Her
 }
 
 class HeroViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-    val textViewHeroName = view.findViewById<TextView>(R.id.textViewBookTitle)
-    val textViewHeroHabilities = view.findViewById<TextView>(R.id.textViewBookAuthor)
-    val imageViewHeroImage = view.findViewById<ImageView>(R.id.imageViewBookMin)
+    val textViewHeroName: TextView = view.findViewById(R.id.textViewBookTitle)
+    val textViewHeroHabilities: TextView = view.findViewById(R.id.textViewBookAuthor)
+    val imageViewHeroImage: ImageView = view.findViewById(R.id.imageViewBookMin)
 }

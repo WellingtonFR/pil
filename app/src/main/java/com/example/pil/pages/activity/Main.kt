@@ -1,9 +1,15 @@
-package com.example.logintest
+package com.example.pil.pages.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.logintest.databinding.ActivityMainBinding
+import com.example.pil.R
+import com.example.pil.databinding.ActivityMainBinding
+import com.example.pil.pages.fragment.AccountManager
+import com.example.pil.pages.fragment.Books
+import com.example.pil.pages.fragment.Heroes
+import com.example.pil.pages.fragment.Home
+
 
 class Main : AppCompatActivity() {
 
@@ -17,9 +23,10 @@ class Main : AppCompatActivity() {
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId) {
-                R.id.home -> replaceFragment(Home())
-                R.id.heroes -> replaceFragment(Heroes())
-                R.id.settings -> replaceFragment(SettingsFragment())
+                R.id.home_item -> replaceFragment(Home())
+                R.id.book_item -> replaceFragment(Books())
+                R.id.heroes_item -> replaceFragment(Heroes())
+                R.id.settings_item -> replaceFragment(AccountManager())
                 else -> {false}
             }
             true

@@ -1,32 +1,23 @@
-package com.example.logintest
+package com.example.pil.pages.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
+import com.example.pil.R
 
-class Login : Fragment() {
+class Login : AppCompatActivity() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.activity_login, container, false)
-    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_login)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val inputEmail = view.findViewById<EditText>(R.id.editTextEmailAddress)
-        val inputPassword = view.findViewById<EditText>(R.id.editTextPassword)
-        val submitLoginButton = view.findViewById<Button>(R.id.buttonLogin)
+        val inputEmail = findViewById<EditText>(R.id.editTextEmailAddress)
+        val inputPassword = findViewById<EditText>(R.id.editTextPassword)
+        val submitLoginButton = findViewById<Button>(R.id.buttonLogin)
 
         fun showError(inputName: TextView, message: String) {
             inputName.error = message
@@ -38,7 +29,7 @@ class Login : Fragment() {
             val inputPasswordValue = inputPassword.text.toString()
 
             if (inputEmailValue == "gbwellington@hotmail.com" && inputPasswordValue == "1234") {
-                val intent = Intent(context, Home::class.java)
+                val intent = Intent(this, Main::class.java)
                 intent.putExtra("USERNAME", "Wellington")
                 startActivity(intent)
             } else if (inputEmailValue == "") {
@@ -47,8 +38,9 @@ class Login : Fragment() {
             } else if (inputPasswordValue == "") {
                 showError(inputPassword, "É necessário preencher a senha")
             } else {
-            Toast.makeText(context,"Login ou senha inválidos",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login ou senha inválidos", Toast.LENGTH_SHORT).show()
             }
         }
+
     }
 }

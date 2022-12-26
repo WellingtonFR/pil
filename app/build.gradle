@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.logintest'
+    namespace 'com.example.pil'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.logintest"
+        applicationId "com.example.pil"
         minSdk 21
         targetSdk 32
         versionCode 1
