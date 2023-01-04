@@ -11,7 +11,9 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/black</item>
+    </style>
+    <style name="ThemeOverlay.SearchView" parent="">
         <item name="android:editTextColor">@color/gray_700</item>
-
+        <item name="android:textColorHint">@color/gray_700</item>
     </style>
 </resources>
