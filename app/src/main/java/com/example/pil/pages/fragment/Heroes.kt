@@ -9,21 +9,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pil.HeroRecycleViewAdapter
 import com.example.pil.R
+import com.example.pil.data.BookListMock
 import com.example.pil.data.Hero
+import com.example.pil.data.HeroListMock
 
 class Heroes : Fragment() {
 
-    private val heroList = listOf<Hero>(
-        Hero("Thor", "Deus do trovão", R.drawable.thor),
-        Hero("Homem-formiga", "Encolher ou fica gigante", R.drawable.homem_formiga),
-        Hero("Homem-aranha", "Soltar teia, agilidade", R.drawable.homem_aranha),
-        Hero("Batman", "Inteligência", R.drawable.batman),
-        Hero("Doutor estranho", "Magia", R.drawable.doutor_estranho),
-        Hero("Viúva negra", "Agilidade, luta", R.drawable.viuva_negra),
-        Hero("Feiticeira escarlate", "Magia", R.drawable.feiticeira_escarlate),
-        Hero("Hulk", "Força", R.drawable.hulk),
-        Hero("Capitão américa", "Luta, agilidade, escudo", R.drawable.capitao_america)
-    )
+    private val heroList = HeroListMock().heroList
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

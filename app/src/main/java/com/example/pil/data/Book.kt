@@ -1,6 +1,6 @@
 package com.example.pil.data
 
-data class Books(
+data class Book(
     val title: String = "",
     val author: String = "",
     val release_year: String = "",

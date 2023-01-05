@@ -48,12 +48,13 @@ class Login : AppCompatActivity() {
                 intent = Intent(this@Login, Main::class.java)
                 intent.putExtra("USERNAME", "Wellington")
                 startActivity(intent)
+                finish()
             }
         }
 
         biometricPrompt = BiometricPrompt(this, executor, callback)
 
-        if (biometricLoginPrefs) {
+        if (checkDeviceHasBiometric() && biometricLoginPrefs) {
             biometricPrompt.authenticate(createPromptInfo())
         }
 
@@ -66,7 +67,13 @@ class Login : AppCompatActivity() {
             val inputPasswordValue = inputPassword.text.toString()
 
             if (inputEmailValue == "gbwellington@hotmail.com" && inputPasswordValue == "1234") {
-                checkDeviceHasBiometric()
+                if (checkDeviceHasBiometric()) {
+                    alertDialogBiometricLogin()
+                } else {
+                    intent = Intent(this@Login, Main::class.java)
+                    intent.putExtra("USERNAME", "Wellington")
+                    startActivity(intent)
+                }
             } else if (inputEmailValue == "") {
                 showError(inputEmail, "É necessário preencher o email")
 
@@ -102,13 +109,13 @@ class Login : AppCompatActivity() {
             .build()
     }
 
-    private fun checkDeviceHasBiometric() {
+    private fun checkDeviceHasBiometric(): Boolean {
 
         val biometricMaganer = BiometricManager.from(this)
         when (biometricMaganer.canAuthenticate(BIOMETRIC_STRONG or DEVICE_CREDENTIAL)) {
             BiometricManager.BIOMETRIC_SUCCESS -> {
                 Log.d("BIOMETRIC_ON", "Can authenticate using biometrics")
-                alertDialogBiometricLogin()
+                return true
             }
             BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE -> {
                 Log.d("BIOMETRIC_OFF", "Biometric device not find")
@@ -120,10 +127,10 @@ class Login : AppCompatActivity() {
                         BIOMETRIC_STRONG or DEVICE_CREDENTIAL
                     )
                 }
-
                 startActivityForResult(enrollment, 100)
             }
         }
+        return false
     }
 
     private fun showError(inputName: TextView, message: String) {

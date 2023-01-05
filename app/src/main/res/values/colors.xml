@@ -6,10 +6,11 @@
     <color name="secondary_color_200">#76B2E6</color>
     <color name="secondary_color_500">#489BE3</color>
     <color name="secondary_color_700">#238BE4</color>
-    <color name="background_color_200">#F3F0D5</color>
+    <color name="background_color_200">#F3F3F3</color>
     <color name="nav_item_color_active">#76B2E6</color>
     <color name="nav_item_color_inactive">#FFFFFF</color>
     <color name="black">#FF000000</color>
+    <color name="gray_100">#CDCDCD</color>
     <color name="gray_200">#8C8C8C</color>
     <color name="gray_500">#505050</color>
     <color name="gray_700">#292929</color>
